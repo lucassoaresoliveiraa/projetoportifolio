@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
 body{
-    padding: 0;
+    padding: -5;
     margin: 0;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: 'amatic sc', sans-serif;
 }
 
@@ -19,7 +19,7 @@ body{
     align-items: center ;
     justify-content: center;
     position: relative;
-    animation: backgroundTransition 8s ease-in-out infinite;
+    animation: backgroundTransition 9s ease-in-out infinite;
 
 }
 
@@ -41,14 +41,14 @@ h2 {
 .social-media a {
     text-decoration: none;
     color: white;
-    font-size: 34px;
-    padding: 1rem 4 rem;
+    font-size: 37px;
+    padding: 1rem 4rem;
     border: 1px solid #ffffff;
     min-width: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5 cubic-bezier(0.55, 0.25, 0.675, 0.97);
+    transition: .6s cubic-bezier(0.55, 0.25, 0.675, 0.97);
 }
 
 a:hover{
@@ -68,13 +68,10 @@ a:hover{
     }
 }
 
-/*Menu*/
-
 .checkbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .checkbox {
@@ -86,21 +83,20 @@ a:hover{
     display: flex;
     justify-content: center;
     cursor: pointer;
-    z-index: 9999 ;
-    transition: 400ms ease-in-out 0;
-
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
 }
 
 .checkbox .trace {
     width: 50px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: white;
     position: absolute;
     border-radius: 4px;
     transition: 0.5s ease-in-out;
 }
 
-.checkbox .trace:nth-child(1){
+.checkbox .trace:nth-child(1) {
     top: 26px;
     transform: rotate(0);
 }
@@ -110,7 +106,7 @@ a:hover{
     transform: rotate(0);
 }
 
-.trace:nth-child(3) {
+.checkbox .trace:nth-child(3) {
     top: 66px;
     transform: rotate(0);
 }
@@ -119,7 +115,7 @@ a:hover{
     display: none;
 }
 
-/*Menu Links*/
+/* MENU */
 
 .menu {
     position: absolute;
@@ -129,9 +125,9 @@ a:hover{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px rgb(255, 254, 254);
-    z-index: -1; 
-    transition: 400ms ease-in-out 0;
+    box-shadow: 0px 0px 0px 0px white;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
 }
 
 .menu-itens {
@@ -146,49 +142,48 @@ a:hover{
     z-index: 2;
     opacity: 0;
     visibility: hidden;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
 }
 
 .menu-itens ul {
     list-style-type: none;
 }
 
-.menu-itens ul li a {
+.menu-itens ul li a{
     margin: 10px 0;
-    color:#11004D;
+    color: #2E1C2B;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 40px;
 }
 
-/*Animação menu*/
+/* ANIMAÇÃO DO MENU */
 
-#toggle:checked + .checkbox .trace:nth-child(1){
+#toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
-    background-color: #11004D;
+    background-color: #2E1C2B;
     top: 47px;
 }
 
-#toggle:checked + .checkbox .trace:nth-child(2){
-    transform: translateX(-100px);
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform:  translateX(-100px);
     width: 30px;
     visibility: hidden;
     opacity: 0;
 }
 
-#toggle:checked + .checkbox .trace:nth-child(3){
+#toggle:checked + .checkbox .trace:nth-child(3) {
     transform: rotate(-45deg);
-    background-color: #11004D;
+    background-color: #2E1C2B;
     top: 48px;
 }
 
 #toggle:checked + .checkbox {
     background-color: white;
-
 }
 
-#toggle:checked ~ .menu {
+#toggle:checked ~ .menu{
     box-shadow: 0px 0px 0px 100vmax white;
     z-index: 1;
 }
@@ -201,13 +196,16 @@ a:hover{
 /*Cards*/
 
 .container {
+
     width: 100%;
-    height: auto;
+    height: 100vh;
+    margin: 0px;
+    background-image: url(./fundo.jpg);
+    background-size: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 3rem 0;
 }
 
 .card-container {
@@ -220,8 +218,6 @@ a:hover{
 .card {
     height: 225px;
     width: 400px;
-    margin: 3rem 0 0;
-    background-image: url('./gitbub.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,18 +225,18 @@ a:hover{
     justify-content: center;
     align-items: center;
     filter: grayscale(0.5);
-    color: white;
+    color: rgb(216, 204, 204);
     cursor: pointer;
     transition: 0.3s;
 }
 
 .card-text{
-    width: 40%;
-    font-family: sans-serif;
+    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1px;
-    color: rgb(109, 109, 109);
+    color: rgba(142, 180, 252, 0.774);
 }
-.card-wrapper {
+/*.card-wrapper {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -275,17 +271,17 @@ a:hover{
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
-}
+}*/
 
 .card:hover {
     filter: unset;
 }
 
-.card:hover > .card-wrapper::before{
+/*.card:hover > .card-wrapper::before{
     opacity: 1;
     width: 300px;
-    height: 180px;
-}
+    height: 80px;
+}*/
 
 .card:hover > .card-wrapper p {
     font-size: 20px;
@@ -296,6 +292,7 @@ a:hover{
 /*Footer*/
 
 .footer {
+    font-size: 25px;
     height: 100px;
     width: 100%;
     display: flex;
