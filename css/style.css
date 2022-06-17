@@ -12,7 +12,7 @@ body{
 .header-wrapper {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(-45deg, #11004D, #14025C, #14199e, #586e99, #8ba5bb);
+    background: linear-gradient(-45deg, #151F59, #514972, #8D628F, #3D3367, #A21642);
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ h2 {
 }
 
 a:hover{
-    color: #18026E;
+    color: #151F59;
     background-color: #ffffff;
 }
 
@@ -231,10 +231,11 @@ a:hover{
 }
 
 .card-text{
-    width: 50%;
+    width: 60%;
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1px;
-    color: rgba(142, 180, 252, 0.774);
+    color: rgba(252, 250, 250, 0.932);
 }
 /*.card-wrapper {
     text-align: center;
@@ -298,7 +299,7 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #11004D;
+    background-color: #A64684;
 }
 
 /*Responsivo*/
